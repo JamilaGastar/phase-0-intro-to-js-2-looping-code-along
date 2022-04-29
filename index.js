@@ -19,23 +19,22 @@
 
 const names = ["Guadalupe", "Ollie", "Aki"];
 
+
+
 function writeCards(names, event) {
+const message = []
    for (let i = 0; i < names.length; i++) {
-       console.log(`Thank you, ${names[i]}, for the wonderful ${event} gift!`);
+       message.push(`Thank you, ${names[i]}, for the wonderful ${event} gift!`);
 }
-return [`Thank you, ${names[0]}, for the wonderful ${event} gift!`,
-`Thank you, ${names[1]}, for the wonderful ${event} gift!`,
-`Thank you, ${names[2]}, for the wonderful ${event} gift!`,
-]
+return message;
 }
 console.log(writeCards(names, "surprise"));
 
 function countDown(number) {
-    while (number > 0) {
-        console.log(`${number}`);
-        number--;
+    while (number >= 0) {
+        console.log(number);
+        --number;
     }
-    return number;
 }
 
-console.log(countDown(10));
+console.log(countDown(4));
